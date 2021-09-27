@@ -1,5 +1,5 @@
 node_modules
-
+build
 # local env files
 .env
 # Log files

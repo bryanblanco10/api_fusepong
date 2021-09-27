@@ -18,6 +18,11 @@ _dotenv.default.config();
 const {
   NODE_ENV
 } = process.env;
-const currentEnv = _development.default;
+let currentEnv = _development.default;
 exports.currentEnv = currentEnv;
-if (NODE_ENV == "PRODUCTION") currentEnv == _production.default;
+
+if (NODE_ENV == "PRODUCTION") {
+  exports.currentEnv = currentEnv = _production.default;
+}
+
+;
